@@ -3,5 +3,6 @@ const app = express();
 const morgan = require('morgan');
 
 app.use(morgan('dev'));
+app.use(express.json());
 
 module.exports = app;
