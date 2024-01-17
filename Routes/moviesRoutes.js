@@ -4,6 +4,8 @@ const moviesController = require('../Controllers/moviesController');
 const router = express.Router();
 
 router.route('/highest-rated').get(moviesController.getHighestRated,moviesController.getAllMovies);
+router.route('/movie-stats').get(moviesController.getMovieStats);
+router.route('/moviesByGenre/:genre').get(moviesController.getMovieByGenre);
 
 router.route('/')
     .get(moviesController.getAllMovies)
@@ -13,5 +15,6 @@ router.route('/:id')
     .get(moviesController.getMovie)
     .patch(moviesController.updateMovie)
     .delete(moviesController.deleteMovie);
+
 
 module.exports = router;
