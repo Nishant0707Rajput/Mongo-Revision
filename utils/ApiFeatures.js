@@ -67,7 +67,7 @@ class ApiFeatures {
 
     pagination() {
         const page = this.queryObj.page * 1 || 1;
-        const limit = this.queryObj.limit * 1 || 10;
+        const limit = this.queryObj.limit * 1 || 15;
         const skip = (page - 1) * limit;
         // const totalRecordsLength = await Movie.countDocuments();
         // if(skip>totalRecordsLength){
